@@ -1,0 +1,28 @@
+==============================================================================
+N = 2                 J = 0.8               K = 3                 
+beta = 1              L = 32                
+N_Therm = 3           N_Total = 200         Seed = 54321          
+N_Measure = 1         N_Each = 1000         NBlock = 1000         
+==============================================================================
+Average: ZZ = 101000 , MCStep = 101000 , Status = 50.50%
+0    <M_l1>       =  5.98704602e-01   1.18688480e-03  8.951e-01  Layer one magnetic density              
+1    <M_l2>       =  5.95736096e-01   1.23806468e-03  9.018e-01  Layer two magnetic density              
+2    <M_t>        =  2.99439099e-01   1.72179944e-03  7.466e-02  Total magnetic density                  
+3    <M_p>        =  8.24909367e-01   6.97028561e-04  7.911e-01  Pairing magnetic density                
+4    <M_ave>      =  2.99439099e-01   1.72179944e-03  7.466e-02  Average magnetic density                
+5    <Mk_l1>      =  1.39915990e-02   3.76405713e-04  9.100e-01  Layer one Fourier of magnetic density   
+6    <Mk_l2>      =  1.41358215e-02   3.29450718e-04  8.898e-01  Layer two Fourier of magnetic density   
+7    <Mk_t>       =  7.03185512e-03   1.54436720e-04  9.036e-01  Total Fourier of magnetic density       
+8    <Mk_p>       =  7.11535626e-03   2.06309940e-04  8.392e-01  Pairing Fourier of magnetic density     
+9    <Mk_ave>     =  7.04141862e-03   1.59144559e-04  8.382e-01  Average Fourier of magnetic density     
+10   <xi_L_l1>    =  1.03051828e+00   2.89640030e-02  8.376e-01  Layer one correlation ratio             
+11   <xi_L_l2>    =  1.02251520e+00   3.01833750e-02  8.385e-01  Layer two correlation ratio             
+12   <xi_L_t>     =  1.02796210e+00   2.15508285e-02  8.589e-01  Total correlation ratio                 
+13   <xi_L_p>     =  1.70899832e+00   5.78445454e-02  7.286e-01  Pairing correlation ratio               
+14   <xi_L_ave>   =  1.02724699e+00   2.23905529e-02  8.228e-01  Average correlation ratio               
+NperBin = 1 , NperBlk = 101 , NBin = 101000
+Simulation Time: 0 day 0:0:0 , Total: 0 day 0:1:7 , Mon Dec  2 18:57:23 2024
+==============================================================================
+Estimated Total Time     = 0 day 0:2:12 	= 132.67 s
+Estimated Remaining Time = 0 day 0:1:5 	= 65.67 s
+==============================================================================

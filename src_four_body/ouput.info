@@ -1,0 +1,19 @@
+//----- Model_Parameters  
+N           2                   Read                                          
+beta        1                   Read                                          
+J           0.8                 Read                                          
+K           3                   Read                                          
+L           32                  Read                                          
+
+//----- Simulation_Parameters  
+Seed        54321               Read                                          
+N_Measure   1                   Read                                          
+N_Each      1000                Read                                          
+N_Therm     3                   Read                                          
+N_Total     200                 Read                                          
+NBlock      1000                Read                                          
+MaxNBin     1000000             Read                                          
+NperBin     1                   Read                                          
+
+Mon Dec  2 18:56:16 2024	Thermalizing...
+Mon Dec  2 18:56:18 2024	Simulating...
