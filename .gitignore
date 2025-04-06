@@ -1,32 +1,13 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
+.vscode/
+__pycache__/
+*.dat
+*.pdf
 *.out
-*.app
+ouput.txt
+ouput.info
+/bin/*
+/build/*
+/lsub/fast.sh
+/qsub/fast.sh
+/lsub/jobs/*/
+/qsub/jobs/*/

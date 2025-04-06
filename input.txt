@@ -1,0 +1,14 @@
+//----- Model_Parameters                                                                            
+J           1.1
+K           1.0
+L           16                           
+
+//----- Simulation_Parameters
+Seed        54321           
+N_Measure   1                                           
+N_Each      1000    
+N_Therm     3                                           
+N_Total     200                                           
+NBlock      1000                                  
+MaxNBin     1000000                                
+NperBin     1                     
