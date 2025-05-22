@@ -11,3 +11,6 @@ ouput.info
 /qsub/fast.sh
 /lsub/jobs/*/
 /qsub/jobs/*/
+
+!data_arXiv_2504.01461/**/*.dat
+!data_arXiv_2504.01461/**/*.pdf
