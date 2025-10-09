@@ -110,7 +110,7 @@ set yrange [0.0:1.2]
 set label '\LARGE{\textbf{(b)}}' at 0.1, 1.1 front
 set label '\huge{{Disorder}}'  at 0.15, 0.15 front
 set label '\huge{{PSF}}' at 2, 0.3 front
-set label '\huge{${\text{SF}}_3$}' at 1.9, 0.9 front
+set label '\huge{${\text{SF}}_2$}' at 1.9, 0.9 front
 
 # set label '\LARGE{\textbf{(d)}}' at 3.6, 1.12 front
 

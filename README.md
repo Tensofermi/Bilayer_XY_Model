@@ -13,6 +13,8 @@ The second implementation focuses on four-body interactions between layers, with
   <img src="doc/H_4.svg">
 </div>
 
+**Note: These are the names from the original version of the model — “two body” corresponds to “single” in the latest version, and “four body” corresponds to “pair.”**
+
 ## How to use
 
 1. Clone the repository:
