@@ -53,7 +53,7 @@ __Four-Body Model__
 - Novel paired BKT phase exists as an intermediate state between disordered and conventional BKT phases
 - Non-trivial behavior observed at phase boundaries
 
-These findings are thoroughly documented in our paper: [arXiv:2504.01461](https://arxiv.org/abs/2504.01461).
+These findings are thoroughly documented in our paper: [arXiv:2504.01461](https://arxiv.org/abs/2504.01461) or [Phys. Rev. B 112, 144420(2025)](https://journals.aps.org/prb/abstract/10.1103/1hkf-t4wy).
 
 ## Citation
 If you use this code or refer to our results in your research, please cite:
@@ -63,5 +63,22 @@ If you use this code or refer to our results in your research, please cite:
   author={Xiao, Tianning and Deng, Youjin and Dong, Xiao-Yu},
   journal={arXiv preprint arXiv:2504.01461},
   year={2025}
+}
+```
+or
+```
+@article{1hkf-t4wy,
+  title = {Fate of the Berezinskii-Kosterlitz-Thouless paired phase in coupled $XY$ models},
+  author = {Xiao, Tianning and Deng, Youjin and Dong, Xiao-Yu},
+  journal = {Phys. Rev. B},
+  volume = {112},
+  issue = {14},
+  pages = {144420},
+  numpages = {15},
+  year = {2025},
+  month = {Oct},
+  publisher = {American Physical Society},
+  doi = {10.1103/1hkf-t4wy},
+  url = {https://link.aps.org/doi/10.1103/1hkf-t4wy}
 }
 ```
