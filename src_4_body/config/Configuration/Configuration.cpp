@@ -12,7 +12,6 @@ Configuration::Configuration(Clock& _ck, IOControl& _io, RandomNumGen& _rn, Para
 void Configuration::initialConf()
 {
     //--- Initialize Basic Parameters
-    Beta = 1.0;
     J = para.J;
     K = para.K;
     Dim = 3;
@@ -63,8 +62,8 @@ void Configuration::initialMeas()
 
     for (int i = 0; i < L; i++)
     {
-        k_cos[i] = cos(2 * M_PI / (double)L * i);
-        k_sin[i] = sin(2 * M_PI / (double)L * i);
+        k_cos[i] = cos(2 * std::acos(-1.0) / (double)L * i);
+        k_sin[i] = sin(2 * std::acos(-1.0) / (double)L * i);
     }
 
     //--- Geometric Measurement

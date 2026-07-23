@@ -14,7 +14,7 @@ struct Parameter
 
     // Model Parameters
     int Nspin, L;
-    double beta, K, J;
+    double K, J;
 
     // Observable label
     int i_M_l1, i_M_l2, i_M_t, i_M_p, i_M_ave;

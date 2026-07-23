@@ -1,0 +1,18 @@
+name: C++ regression tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        source: [src_2_body, src_4_body]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build simulator
+        run: make -j2 SRC_DIR=${{ matrix.source }}
+      - name: Run regression tests
+        run: make test SRC_DIR=${{ matrix.source }}

@@ -7,7 +7,7 @@
 double Configuration::randAngle()
 {
     // Angle \in [-π, π)
-    return rn.getRandomDouble(0, 2 * M_PI)  - M_PI;
+    return rn.getRandomDouble(0, 2 * std::acos(-1.0))  - std::acos(-1.0);
 }
 
 void Configuration::randRotation()
@@ -26,5 +26,5 @@ void Configuration::yaxisFlip(long _site)
 
 void Configuration::pointFlip(long _site)
 {
-    Site[_site] = modAngle(Site[_site] + M_PI);
+    Site[_site] = modAngle(Site[_site] + std::acos(-1.0));
 }

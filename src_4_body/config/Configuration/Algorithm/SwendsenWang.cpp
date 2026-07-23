@@ -51,7 +51,7 @@ void Configuration::SwendsenWang_A()
         theta_j_b = Site[Latt.getNNSite(j_Site, 0)];
         E_curr = getEnergyUnit(theta_i_a, theta_j_a, theta_i_b, theta_j_b);
         E_flip = getEnergyUnit(theta_i_a, -theta_j_a, theta_i_b, -theta_j_b);
-        P_sw = 1.0 - exp(E_curr - E_flip);
+        P_sw = E_flip > E_curr ? -std::expm1(E_curr - E_flip) : 0.0;
         if(rn.getRandomDouble() < P_sw)
         {
             // unite clusters
@@ -66,7 +66,7 @@ void Configuration::SwendsenWang_A()
         theta_j_b = Site[Latt.getNNSite(j_Site, 0)];
         E_curr = getEnergyUnit(theta_i_a, theta_j_a, theta_i_b, theta_j_b);
         E_flip = getEnergyUnit(theta_i_a, -theta_j_a, theta_i_b, -theta_j_b);
-        P_sw = 1.0 - exp(E_curr - E_flip);
+        P_sw = E_flip > E_curr ? -std::expm1(E_curr - E_flip) : 0.0;
         if(rn.getRandomDouble() < P_sw)
         {
             // unite clusters
@@ -107,7 +107,7 @@ void Configuration::SwendsenWang_B1()
         i_a          j_a
          o————————————o               E_curr
 
-        i_a        j_a + pi           E_flip = - E_curr
+        i_a        j_a + pi           E_flip = -Ea + Eb - Ep
          o————————————o         
 
     */
@@ -131,8 +131,8 @@ void Configuration::SwendsenWang_B1()
         theta_i_b = Site[Latt.getNNSite(i_Site, 0)];
         theta_j_b = Site[Latt.getNNSite(j_Site, 0)];
         E_curr = getEnergyUnit(theta_i_a, theta_j_a, theta_i_b, theta_j_b);
-        E_flip = - E_curr;
-        P_sw = 1.0 - exp(E_curr - E_flip);
+        E_flip = getEnergyUnit(theta_i_a, theta_j_a + std::acos(-1.0), theta_i_b, theta_j_b);
+        P_sw = E_flip > E_curr ? -std::expm1(E_curr - E_flip) : 0.0;
         if(rn.getRandomDouble() < P_sw)
         {
             // unite clusters
@@ -146,8 +146,8 @@ void Configuration::SwendsenWang_B1()
         theta_i_b = Site[Latt.getNNSite(i_Site, 0)];
         theta_j_b = Site[Latt.getNNSite(j_Site, 0)];
         E_curr = getEnergyUnit(theta_i_a, theta_j_a, theta_i_b, theta_j_b);
-        E_flip = - E_curr;
-        P_sw = 1.0 - exp(E_curr - E_flip);
+        E_flip = getEnergyUnit(theta_i_a, theta_j_a + std::acos(-1.0), theta_i_b, theta_j_b);
+        P_sw = E_flip > E_curr ? -std::expm1(E_curr - E_flip) : 0.0;
         if(rn.getRandomDouble() < P_sw)
         {
             // unite clusters
@@ -187,7 +187,7 @@ void Configuration::SwendsenWang_B2()
         i_b          j_b
          o————————————o               E_curr
 
-        i_b        j_b + pi           E_flip = - E_curr
+        i_b        j_b + pi           E_flip = Ea - Eb - Ep
          o————————————o         
 
     */
@@ -211,8 +211,8 @@ void Configuration::SwendsenWang_B2()
         theta_i_b = Site[Latt.getNNSite(i_Site, 5)];
         theta_j_b = Site[Latt.getNNSite(j_Site, 5)];
         E_curr = getEnergyUnit(theta_i_a, theta_j_a, theta_i_b, theta_j_b);
-        E_flip = - E_curr;
-        P_sw = 1.0 - exp(E_curr - E_flip);
+        E_flip = getEnergyUnit(theta_i_a, theta_j_a + std::acos(-1.0), theta_i_b, theta_j_b);
+        P_sw = E_flip > E_curr ? -std::expm1(E_curr - E_flip) : 0.0;
         if(rn.getRandomDouble() < P_sw)
         {
             // unite clusters
@@ -226,8 +226,8 @@ void Configuration::SwendsenWang_B2()
         theta_i_b = Site[Latt.getNNSite(i_Site, 5)];
         theta_j_b = Site[Latt.getNNSite(j_Site, 5)];
         E_curr = getEnergyUnit(theta_i_a, theta_j_a, theta_i_b, theta_j_b);
-        E_flip = - E_curr;
-        P_sw = 1.0 - exp(E_curr - E_flip);
+        E_flip = getEnergyUnit(theta_i_a, theta_j_a + std::acos(-1.0), theta_i_b, theta_j_b);
+        P_sw = E_flip > E_curr ? -std::expm1(E_curr - E_flip) : 0.0;
         if(rn.getRandomDouble() < P_sw)
         {
             // unite clusters
@@ -277,7 +277,7 @@ void Configuration::SwendsenWang_C()
          i_b      j_b - pi
           o           o
           |           |
-          |           |         E_flip = - E_curr
+          |           |         E_flip = -Ea - Eb + Ep
           |           |
           o           o
          i_a      j_a + pi         
@@ -303,8 +303,8 @@ void Configuration::SwendsenWang_C()
         theta_i_b = Site[Latt.getNNSite(i_Site, 0)];
         theta_j_b = Site[Latt.getNNSite(j_Site, 0)];
         E_curr = getEnergyUnit(theta_i_a, theta_j_a, theta_i_b, theta_j_b);
-        E_flip = - E_curr;
-        P_sw = 1.0 - exp(E_curr - E_flip);
+        E_flip = getEnergyUnit(theta_i_a, theta_j_a + std::acos(-1.0), theta_i_b, theta_j_b - std::acos(-1.0));
+        P_sw = E_flip > E_curr ? -std::expm1(E_curr - E_flip) : 0.0;
         if(rn.getRandomDouble() < P_sw)
         {
             // unite clusters
@@ -318,8 +318,8 @@ void Configuration::SwendsenWang_C()
         theta_i_b = Site[Latt.getNNSite(i_Site, 0)];
         theta_j_b = Site[Latt.getNNSite(j_Site, 0)];
         E_curr = getEnergyUnit(theta_i_a, theta_j_a, theta_i_b, theta_j_b);
-        E_flip = - E_curr;
-        P_sw = 1.0 - exp(E_curr - E_flip);
+        E_flip = getEnergyUnit(theta_i_a, theta_j_a + std::acos(-1.0), theta_i_b, theta_j_b - std::acos(-1.0));
+        P_sw = E_flip > E_curr ? -std::expm1(E_curr - E_flip) : 0.0;
         if(rn.getRandomDouble() < P_sw)
         {
             // unite clusters

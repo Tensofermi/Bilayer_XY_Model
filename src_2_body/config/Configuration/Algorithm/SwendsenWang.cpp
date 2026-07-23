@@ -32,8 +32,8 @@ void Configuration::SwendsenWang()
             strength = J;   // in the same layer
             if(zj_coor != zk_coor) strength = K;   // for different layers
 
-            project = sin(Site[j_Site]) * sin(Site[k_Site]);
-            P_sw = 1.0 - exp(-2 * Beta * strength * project);
+            project = strength * sin(Site[j_Site]) * sin(Site[k_Site]);
+            P_sw = project > 0.0 ? -std::expm1(-2.0 * project) : 0.0;
             if(rn.getRandomDouble() < P_sw)
             {
                 // unite clusters

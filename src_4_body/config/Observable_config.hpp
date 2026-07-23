@@ -4,7 +4,6 @@
 void Observable::initObservable()  // add addBasicObser() & addCombiObser()
 {
 	int L = para.L;
-	double Beta = para.beta;
 
     //  Observables               Name           				Description             		 		A     +     B  *  Obs 
 	addBasicObser(para.i_corr_layer    , "corr_layer"   , "correlation of two layers"    				, 0     , 1.0      					);
@@ -33,15 +32,15 @@ void Observable::initObservable()  // add addBasicObser() & addCombiObser()
 
 void Observable::calCombiObser()  // add Result[]
 {
-	Result[para.i_xi_l1] = 1.0 / (2 * para.L * sin(M_PI / para.L)) * sqrt(Ob[para.i_M_l1] / Ob[para.i_Mk_l1] - 1.0);
+	Result[para.i_xi_l1] = 1.0 / (2 * para.L * sin(std::acos(-1.0) / para.L)) * sqrt(Ob[para.i_M_l1] / Ob[para.i_Mk_l1] - 1.0);
 
-	Result[para.i_xi_l2] = 1.0 / (2 * para.L * sin(M_PI / para.L)) * sqrt(Ob[para.i_M_l2] / Ob[para.i_Mk_l2] - 1.0);
+	Result[para.i_xi_l2] = 1.0 / (2 * para.L * sin(std::acos(-1.0) / para.L)) * sqrt(Ob[para.i_M_l2] / Ob[para.i_Mk_l2] - 1.0);
 	
-	Result[para.i_xi_t] = 1.0 / (2 * para.L * sin(M_PI / para.L)) * sqrt(Ob[para.i_M_t] / Ob[para.i_Mk_t] - 1.0);
+	Result[para.i_xi_t] = 1.0 / (2 * para.L * sin(std::acos(-1.0) / para.L)) * sqrt(Ob[para.i_M_t] / Ob[para.i_Mk_t] - 1.0);
 
-	Result[para.i_xi_p] = 1.0 / (2 * para.L * sin(M_PI / para.L)) * sqrt(Ob[para.i_M_p] / Ob[para.i_Mk_p] - 1.0);
+	Result[para.i_xi_p] = 1.0 / (2 * para.L * sin(std::acos(-1.0) / para.L)) * sqrt(Ob[para.i_M_p] / Ob[para.i_Mk_p] - 1.0);
 
-	Result[para.i_xi_ave] = 1.0 / (2 * para.L * sin(M_PI / para.L)) * sqrt(Ob[para.i_M_ave] / Ob[para.i_Mk_ave] - 1.0);
+	Result[para.i_xi_ave] = 1.0 / (2 * para.L * sin(std::acos(-1.0) / para.L)) * sqrt(Ob[para.i_M_ave] / Ob[para.i_Mk_ave] - 1.0);
 
 }
 

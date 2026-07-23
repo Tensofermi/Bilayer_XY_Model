@@ -18,7 +18,7 @@ public:
     Hyperrectangle Latt;            
     int Dim, Nspin, L, NNb;
     long Vol;
-    double Beta, J, K;
+    double J, K;
 
     //--- Basic parameter for algorithms
     std::vector<int> Mem, Que;
